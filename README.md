@@ -54,6 +54,18 @@ Esta é uma versão **deliberadamente não acessível** de uma página educativa
 - Sem integração com intérprete de Libras
 - Pessoas surdas não têm acesso ao conteúdo em Libras
 
+### 11. ❌ Sem Modo Escuro/Claro (sem adaptação visual)
+- Não há alternância de tema (claro/escuro)
+- Usuários sensíveis à luz (fotofobia) podem ter desconforto
+- Em ambientes escuros (à noite), o brilho do fundo branco causa fadiga visual
+- Não respeita preferências do sistema (como prefers-color-scheme)
+
+### 12. ❌ Sem Modo Daltonismo (dependência de cores)
+- Não há modo com paleta ajustada para daltonismo
+- A interface depende de cores para transmitir significado (ex: “verde = correto”, - “vermelho = errado”)
+- Pessoas com protanopia/deuteranopia podem não distinguir feedbacks visuais
+
+Não há reforço por padrão/ícone/texto alternativo para diferenciação
 ## Como Testar os Problemas
 
 ### Teste de Teclado
