@@ -67,30 +67,52 @@ Esta é uma versão **totalmente acessível** de uma página educativa sobre Seg
 - `aria-live="polite"` anuncia mudança para screen reader
 - Funciona em zoom até 200%
 
-### 11. ✅ Foco Visível
+### 11. ✅ Modo Escuro / Claro (Persistente)
+- Alternância acessível
+- Anuncia mudança via aria-live
+- Preferência salva em localStorage
+- Mantém escolha após recarregar página
+- Acessibilidade garantida
+- Contraste reavaliado no modo escuro
+- Fundo escuro com texto claro
+- Não depende apenas de estética
+- Ícones SVG inline (leve e performático)
+
+### 12. ✅ Modo para Daltonismo (CVD Mode)
+- Alternância dedicada
+- aria-pressed atualizado dinamicamente
+- Estado salvo em localStorage
+- O que o modo faz:
+   - Ajusta paleta para maior distinção entre cores
+   - Reduz dependência de vermelho/verde
+   - Usa contraste reforçado
+   - Mantém status sempre indicado por texto + cor
+- Compatível com: Protanopia, Deuteranopia e Tritanopia
+
+### 13. ✅ Foco Visível
 - Outline: **3px solid #ff8c00** (laranja)
 - Offset: **2px** (espaço entre elemento e outline)
 - Visível em TAB/SHIFT+TAB em todos elementos interativos
 - Não removido (acessibilidade)
 
-### 12. ✅ Atributos ARIA
+### 14. ✅ Atributos ARIA
 - `aria-label`: Descreve buttons (ex: "Abrir menu")
 - `aria-expanded`: Indica se menu está aberto/fechado
 - `aria-controls`: Liga button ao painel que controla
 - `aria-live="polite"`: Anuncia mudanças dinâmicas (feedback quiz)
 - `role="group"`: Agrupa controles de fonte
 
-### 13. ✅ Screen Reader Ready
+### 15. ✅ Screen Reader Ready
 - Estrutura semântica permite navegação clara
 - Alt text em imagens
 - ARIA attributes onde necessário
 - Feedback dinâmico anunciado em `aria-live`
 
-### 14. ✅ Redução de Movimento
+### 16. ✅ Redução de Movimento
 - `@media (prefers-reduced-motion: reduce)`: Desativa animations
 - Respeita preferência do sistema operacional
 
-### 15. ✅ VLibras Integrado
+### 17. ✅ VLibras Integrado
 - Intérprete em Libras disponível
 - Pessoas surdas têm acesso ao conteúdo em Libras
 - Widget acessível no canto da página
