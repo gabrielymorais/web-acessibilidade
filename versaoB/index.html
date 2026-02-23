@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Página educativa de segurança na internet para alunos do Ensino Médio."
+    />
+    <title>Segurança na Internet - Versão B (Acessível)</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo-principal"
+      >Pular para o conteúdo principal</a
+    >
+
+    <header class="site-header">
+      <div class="container">
+        <p class="eyebrow">Projeto Educativo Interativo</p>
+        <h1>Segurança na Internet para Ensino Médio e Fundamental</h1>
+        <p class="lead">
+          Aprenda a identificar golpes, proteger seus dados e navegar com
+          confiança em qualquer dispositivo.
+        </p>
+        <div class="hero-actions">
+          <a class="button-link button-solid" href="#simulador"
+            >Começar simulação de golpes</a
+          >
+          <a class="button-link" href="#dicas">Ver dicas rápidas</a>
+        </div>
+        <ul class="header-badges" aria-label="Recursos da experiência">
+          <li>Visual responsivo</li>
+          <li>Teclado completo</li>
+          <li>WCAG 2.1 AA</li>
+          <li>VLibras integrado</li>
+        </ul>
+      </div>
+    </header>
+
+    <nav class="site-nav" aria-label="Navegação principal">
+      <div class="container nav-content">
+        <button
+          id="mobile-menu-toggle"
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="nav-panel"
+          aria-label="Abrir menu de navegação"
+        >
+          ☰ Menu
+        </button>
+
+        <div id="nav-panel" class="nav-panel">
+          <ul>
+            <li><a href="#simulador">Simulador</a></li>
+            <li><a href="#senhas">Ir para Senhas Seguras</a></li>
+            <li><a href="#privacidade">Ir para Privacidade nas Redes</a></li>
+            <li><a href="#dicas">Ir para Dicas Práticas</a></li>
+          </ul>
+
+          <div
+            class="font-controls"
+            role="group"
+            aria-label="Controles de acessibilidade (fonte, daltonismo e modo noturno)"
+          >
+            <button
+              id="font-decrease"
+              type="button"
+              class="font-btn"
+              aria-label="Diminuir fonte"
+            >
+              A-
+            </button>
+            <button
+              id="font-reset"
+              type="button"
+              class="font-btn"
+              aria-label="Voltar fonte ao tamanho padrão"
+            >
+              A
+            </button>
+            <button
+              id="font-increase"
+              type="button"
+              class="font-btn"
+              aria-label="Aumentar fonte"
+            >
+              A+
+            </button>
+
+            <button
+              id="toggle-cvd"
+              type="button"
+              class="font-btn icon-btn"
+              aria-pressed="false"
+              aria-label="Ativar modo para daltonismo (cores mais distinguíveis)"
+              title="Daltonismo"
+            >
+              <span class="icon" aria-hidden="true"></span>
+            </button>
+
+            <button
+              id="toggle-dark"
+              type="button"
+              class="font-btn icon-btn"
+              aria-pressed="false"
+              aria-label="Ativar modo noturno"
+              title="Modo noturno"
+            >
+              <span class="icon" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+
+        <p id="font-status" class="sr-only" aria-live="polite"></p>
+        <p id="theme-status" class="sr-only" aria-live="polite"></p>
+      </div>
+    </nav>
+
+    <main id="conteudo-principal" class="container" tabindex="-1">
+      <section
+        class="impact-grid"
+        aria-label="Resumo da trilha de aprendizagem"
+      >
+        <article class="impact-card">
+          <h2>3 passos para se proteger hoje</h2>
+          <p>
+            Crie senha forte, ative verificação em duas etapas e pense antes de
+            clicar em links.
+          </p>
+        </article>
+        <article class="impact-card">
+          <h2>Golpes mais comuns</h2>
+          <p>
+            Falsos prêmios, mensagens urgentes e páginas clonadas estão entre os
+            ataques mais frequentes.
+          </p>
+        </article>
+        <article class="impact-card">
+          <h2>Seu dado vale muito</h2>
+          <p>
+            Fotos, localização, rotina e documentos precisam de proteção para
+            evitar exposição indevida.
+          </p>
+        </article>
+      </section>
+
+      <section class="highlight" aria-label="Alerta importante de segurança">
+        <p>
+          <strong>⚠ Alerta:</strong> nenhum banco ou escola pede senha por
+          mensagem. Em dúvida, não clique no link e confirme por canal oficial.
+        </p>
+      </section>
+
+      <section
+        id="simulador"
+        class="card card-feature"
+        aria-labelledby="titulo-simulador"
+      >
+        <p class="section-kicker">Atividade de Extensão</p>
+        <h2 id="titulo-simulador">Simulador rápido: é golpe ou não?</h2>
+        <p>
+          Leia o cenário e escolha uma opção. O feedback aparece logo abaixo de
+          cada pergunta.
+        </p>
+
+        <div class="quiz-grid">
+          <article class="quiz-item" aria-labelledby="q1-title">
+            <h3 id="q1-title">Situação 1</h3>
+            <p>
+              Você recebe mensagem dizendo que sua conta será bloqueada em 10
+              minutos e pedindo senha para confirmar.
+            </p>
+            <div class="quiz-actions">
+              <button
+                type="button"
+                class="quiz-btn"
+                data-target="q1-feedback"
+                data-correct="true"
+              >
+                É golpe
+              </button>
+              <button
+                type="button"
+                class="quiz-btn"
+                data-target="q1-feedback"
+                data-correct="false"
+              >
+                Parece seguro
+              </button>
+            </div>
+            <p
+              id="q1-feedback"
+              class="quiz-feedback"
+              role="status"
+              aria-live="polite"
+            ></p>
+          </article>
+
+          <article class="quiz-item" aria-labelledby="q2-title">
+            <h3 id="q2-title">Situação 2</h3>
+            <p>
+              Um professor envia link no ambiente oficial da escola para baixar
+              material da aula com domínio conhecido.
+            </p>
+            <div class="quiz-actions">
+              <button
+                type="button"
+                class="quiz-btn"
+                data-target="q2-feedback"
+                data-correct="true"
+              >
+                Parece seguro
+              </button>
+              <button
+                type="button"
+                class="quiz-btn"
+                data-target="q2-feedback"
+                data-correct="false"
+              >
+                É golpe
+              </button>
+            </div>
+            <p
+              id="q2-feedback"
+              class="quiz-feedback"
+              role="status"
+              aria-live="polite"
+            ></p>
+          </article>
+
+          <article class="quiz-item" aria-labelledby="q3-title">
+            <h3 id="q3-title">Situação 3</h3>
+            <p>
+              Chega um e-mail com erro de português pedindo clique imediato para
+              "atualizar cadastro" em um link estranho.
+            </p>
+            <div class="quiz-actions">
+              <button
+                type="button"
+                class="quiz-btn"
+                data-target="q3-feedback"
+                data-correct="true"
+              >
+                É golpe
+              </button>
+              <button
+                type="button"
+                class="quiz-btn"
+                data-target="q3-feedback"
+                data-correct="false"
+              >
+                Parece seguro
+              </button>
+            </div>
+            <p
+              id="q3-feedback"
+              class="quiz-feedback"
+              role="status"
+              aria-live="polite"
+            ></p>
+          </article>
+
+          <article class="quiz-item" aria-labelledby="q4-title">
+            <h3 id="q4-title">Situação 4</h3>
+            <p>
+              Você recebe mensagem dizendo que ganhou prêmio, mas para receber
+              precisa mandar foto do seu documento no chat.
+            </p>
+            <div class="quiz-actions">
+              <button
+                type="button"
+                class="quiz-btn"
+                data-target="q4-feedback"
+                data-correct="true"
+              >
+                É golpe
+              </button>
+              <button
+                type="button"
+                class="quiz-btn"
+                data-target="q4-feedback"
+                data-correct="false"
+              >
+                Parece seguro
+              </button>
+            </div>
+            <p
+              id="q4-feedback"
+              class="quiz-feedback"
+              role="status"
+              aria-live="polite"
+            ></p>
+          </article>
+
+          <article class="quiz-item" aria-labelledby="q5-title">
+            <h3 id="q5-title">Situação 5</h3>
+            <p>
+              Uma pessoa desconhecida pede o código que chegou por SMS no seu
+              celular para "confirmar cadastro".
+            </p>
+            <div class="quiz-actions">
+              <button
+                type="button"
+                class="quiz-btn"
+                data-target="q5-feedback"
+                data-correct="true"
+              >
+                É golpe
+              </button>
+              <button
+                type="button"
+                class="quiz-btn"
+                data-target="q5-feedback"
+                data-correct="false"
+              >
+                Parece seguro
+              </button>
+            </div>
+            <p
+              id="q5-feedback"
+              class="quiz-feedback"
+              role="status"
+              aria-live="polite"
+            ></p>
+          </article>
+
+          <article class="quiz-item" aria-labelledby="q6-title">
+            <h3 id="q6-title">Situação 6</h3>
+            <p>
+              Você criou uma senha nova, forte, e só você sabe. Também ativou
+              verificação em duas etapas.
+            </p>
+            <div class="quiz-actions">
+              <button
+                type="button"
+                class="quiz-btn"
+                data-target="q6-feedback"
+                data-correct="true"
+              >
+                Parece seguro
+              </button>
+              <button
+                type="button"
+                class="quiz-btn"
+                data-target="q6-feedback"
+                data-correct="false"
+              >
+                É golpe
+              </button>
+            </div>
+            <p
+              id="q6-feedback"
+              class="quiz-feedback"
+              role="status"
+              aria-live="polite"
+            ></p>
+          </article>
+        </div>
+      </section>
+
+      <section id="senhas" aria-labelledby="titulo-senhas" class="card">
+        <p class="section-kicker">Proteção de conta</p>
+        <h2 id="titulo-senhas">Senhas Seguras</h2>
+        <p>
+          Use senhas longas e únicas em cada serviço. Misture letras maiúsculas,
+          minúsculas, números e símbolos.
+        </p>
+        <p>
+          Sempre que possível, ative a autenticação em dois fatores para reduzir
+          o risco de acesso indevido.
+        </p>
+        <div class="actions">
+          <button type="button" id="abrir-guia">
+            Abrir guia de senha forte
+          </button>
+          <a
+            class="button-link"
+            href="https://cartilha.cert.br/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Acessar a Cartilha de Segurança para Internet do CERT.br
+          </a>
+        </div>
+      </section>
+
+      <section
+        id="privacidade"
+        aria-labelledby="titulo-privacidade"
+        class="card"
+      >
+        <p class="section-kicker">Uso consciente de redes sociais</p>
+        <h2 id="titulo-privacidade">Privacidade nas Redes Sociais</h2>
+        <p>
+          Revise configurações de privacidade para controlar quem pode ver suas
+          informações e publicações.
+        </p>
+        <p>
+          Evite compartilhar dados sensíveis, como endereço, escola, rotina e
+          documentos pessoais em perfis públicos.
+        </p>
+        <p>
+          <a
+            class="button-link"
+            href="https://www.gov.br/anpd/pt-br/centrais-de-conteudo"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Acessar materiais de estudo sobre proteção de dados no portal da ANPD"
+          >
+            Acesse materiais completos sobre proteção de dados
+          </a>
+        </p>
+      </section>
+
+      <section id="dicas" aria-labelledby="titulo-dicas" class="card">
+        <p class="section-kicker">Checklist diário</p>
+        <h2 id="titulo-dicas">Dicas Práticas para o Dia a Dia</h2>
+        <ul class="tips-list">
+          <li>
+            Desconfie de mensagens urgentes pedindo código, senha ou dados
+            bancários.
+          </li>
+          <li>
+            Verifique o endereço do site antes de preencher qualquer formulário.
+          </li>
+          <li>Mantenha sistema, navegador e aplicativos sempre atualizados.</li>
+          <li>
+            Evite usar Wi-Fi público para acessar contas sensíveis sem proteção.
+          </li>
+        </ul>
+        <img
+          src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=900&q=60"
+          alt="Tela de login com cadeado simbolizando proteção de conta"
+        />
+        <p>
+          <a
+            class="button-link"
+            href="https://cartilha.cert.br/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Acesse nossa galeria de conteúdos sobre segurança digital para
+            jovens
+          </a>
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>
+          Projeto acadêmico de Programação Web 2 — foco em acessibilidade e
+          inclusão digital.
+        </p>
+      </div>
+    </footer>
+
+    <button
+      id="back-to-top"
+      type="button"
+      class="back-to-top"
+      aria-label="Voltar ao topo"
+    >
+      ↑
+    </button>
+
+    <div vw class="enabled">
+      <div
+        vw-access-button
+        class="active"
+        aria-label="Abrir opções de acessibilidade em Libras"
+      ></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget("https://vlibras.gov.br/app");
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
